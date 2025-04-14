@@ -1,0 +1,67 @@
+.hero-section {
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url("https://picsum.photos/1920/1080?random=0");
+	background-size: cover;
+	background-position: center;
+	padding: 100px 0;
+	margin-bottom: 30px;
+}
+.card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.btn-primary {
+	background-color: #1db954;
+	border-color: #1db954;
+}
+
+.btn-primary:hover {
+	background-color: #1ed760;
+	border-color: #1ed760;
+}
+
+.btn-outline-primary {
+	border-color: #1db954;
+	color: #1db954;
+}
+
+.btn-outline-primary:hover {
+	background-color: #1db954;
+	border-color: #1db954;
+}.search-bar .form-control {
+	border-radius: 20px 0 0 20px;
+	border: none;
+	padding: 12px 20px;
+}
+
+.search-bar .btn {
+	border-radius: 0 20px 20px 0;
+	padding: 12px 25px;
+}
+.card .rounded-circle {
+	transition: transform 0.3s ease;
+}
+
+.card:hover .rounded-circle {
+	transform: scale(1.05);
+}
+.social-links a {
+	font-size: 1.5rem;
+	transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+	opacity: 0.8;
+}@media (max-width: 768px) {
+	.hero-section {
+		padding: 60px 0;
+	}
+
+	.search-bar .input-group {
+		width: 100% !important;
+	}
+}
