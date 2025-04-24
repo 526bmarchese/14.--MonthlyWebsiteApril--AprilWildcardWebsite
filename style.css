@@ -1,27 +1,24 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
 .hero-section {
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url("https://picsum.photos/1920/1080?random=0");
 	background-size: cover;
 	background-position: center;
-	padding: 100px 0;
-	margin-bottom: 30px;
-}
-.card {
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	padding: 80px 0;
+	color: white;
 }
 
-.card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
 .btn-primary {
 	background-color: #1db954;
 	border-color: #1db954;
 }
 
 .btn-primary:hover {
-	background-color: #1ed760;
-	border-color: #1ed760;
+	background-color: #19a64a;
+	border-color: #19a64a;
 }
 
 .btn-outline-primary {
@@ -31,37 +28,19 @@
 
 .btn-outline-primary:hover {
 	background-color: #1db954;
-	border-color: #1db954;
-}.search-bar .form-control {
-	border-radius: 20px 0 0 20px;
-	border: none;
-	padding: 12px 20px;
+	color: white;
 }
 
-.search-bar .btn {
-	border-radius: 0 20px 20px 0;
-	padding: 12px 25px;
-}
-.card .rounded-circle {
-	transition: transform 0.3s ease;
+/* card styles */
+.card {
+	margin-bottom: 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover .rounded-circle {
-	transform: scale(1.05);
-}
-.social-links a {
-	font-size: 1.5rem;
-	transition: opacity 0.3s ease;
+.card:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.social-links a:hover {
+footer a:hover {
 	opacity: 0.8;
-}@media (max-width: 768px) {
-	.hero-section {
-		padding: 60px 0;
-	}
-
-	.search-bar .input-group {
-		width: 100% !important;
-	}
 }
