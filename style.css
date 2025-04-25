@@ -1,7 +1,9 @@
+/* Basic Styles */
 body {
 	font-family: Arial, sans-serif;
 }
 
+/* Hero Section */
 .hero-section {
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url("https://picsum.photos/1920/1080?random=0");
@@ -11,6 +13,7 @@ body {
 	color: white;
 }
 
+/* Button styles */
 .btn-primary {
 	background-color: #1db954;
 	border-color: #1db954;
@@ -31,7 +34,7 @@ body {
 	color: white;
 }
 
-/* card styles */
+/* Card styles */
 .card {
 	margin-bottom: 20px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -41,6 +44,112 @@ body {
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer styles */
 footer a:hover {
 	opacity: 0.8;
+}
+
+/* Genre Cards */
+.genre-card {
+	height: 150px;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.genre-card:hover {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.genre-overlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	color: white;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.genre-card[data-genre="pop"] {
+	background-image: url('https://picsum.photos/300/150?random=101');
+	background-size: cover;
+}
+
+.genre-card[data-genre="rock"] {
+	background-image: url('https://picsum.photos/300/150?random=102');
+	background-size: cover;
+}
+
+.genre-card[data-genre="hip-hop"] {
+	background-image: url('https://picsum.photos/300/150?random=103');
+	background-size: cover;
+}
+
+.genre-card[data-genre="electronic"] {
+	background-image: url('https://picsum.photos/300/150?random=104');
+	background-size: cover;
+}
+
+.genre-card[data-genre="jazz"] {
+	background-image: url('https://picsum.photos/300/150?random=105');
+	background-size: cover;
+}
+
+.genre-card[data-genre="classical"] {
+	background-image: url('https://picsum.photos/300/150?random=106');
+	background-size: cover;
+}
+
+.genre-card[data-genre="country"] {
+	background-image: url('https://picsum.photos/300/150?random=107');
+	background-size: cover;
+}
+
+.genre-card[data-genre="rb"] {
+	background-image: url('https://picsum.photos/300/150?random=108');
+	background-size: cover;
+}
+
+/* Latest Releases */
+#latest .card {
+	border-radius: 8px;
+	transition: transform 0.2s;
+}
+
+#latest .card:hover {
+	transform: translateY(-5px);
+}
+
+/* Newsletter Section */
+#newsletter {
+	background-color: #1db954;
+}
+
+#subscription-message.success {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#subscription-message.error {
+	color: white;
+	background-color: rgba(255, 0, 0, 0.3);
+	padding: 5px;
+	border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.hero-section {
+		padding: 60px 0;
+	}
+	
+	.genre-card {
+		height: 120px;
+	}
 }
