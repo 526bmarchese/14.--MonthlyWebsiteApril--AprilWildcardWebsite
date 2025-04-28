@@ -1,9 +1,6 @@
-/* Basic Styles */
 body {
 	font-family: Arial, sans-serif;
 }
-
-/* Hero Section */
 .hero-section {
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 		url("https://picsum.photos/1920/1080?random=0");
@@ -142,8 +139,6 @@ footer a:hover {
 	padding: 5px;
 	border-radius: 5px;
 }
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
 	.hero-section {
 		padding: 60px 0;

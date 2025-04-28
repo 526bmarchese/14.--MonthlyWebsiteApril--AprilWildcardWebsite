@@ -17,14 +17,14 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#"><i class="fas fa-music me-2"></i>Music Discovery</a>
+      <a class="navbar-brand" href="index.html"><i class="fas fa-music me-2"></i>Music Discovery</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link active" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#playlists">Playlists</a>
@@ -39,7 +39,10 @@
             <a class="nav-link" href="#latest">Latest</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
           </li>
         </ul>
       </div>
@@ -56,6 +59,47 @@
       </div>
     </div>
   </header>
+
+  <!-- Music Search Section -->
+  <section id="search" class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mb-4">Find Your Next Favorite</h2>
+          <p class="mb-4">Search for artists, songs, or albums and discover new music</p>
+
+          <div class="search-container mb-4">
+            <div class="input-group">
+              <input type="text" class="form-control" id="music-search" placeholder="Enter artist, song, or album...">
+              <button class="btn btn-primary" id="search-btn" type="button">Search</button>
+            </div>
+          </div>
+
+          <div class="search-platforms mb-4">
+            <p>Find this music on:</p>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="https://open.spotify.com" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-spotify me-2"></i>Spotify
+              </a>
+              <a href="https://music.apple.com" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-apple me-2"></i>Apple Music
+              </a>
+              <a href="https://www.youtube.com/music" target="_blank" class="btn btn-outline-dark">
+                <i class="fab fa-youtube me-2"></i>YouTube Music
+              </a>
+            </div>
+          </div>
+
+          <div class="search-results mt-4" id="search-results" style="display: none;">
+            <h3 class="mb-3">Search Results</h3>
+            <div class="row" id="results-container">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Featured Playlists -->
   <section id="playlists" class="py-5">
@@ -103,7 +147,8 @@
       <div class="row">
         <div class="col-md-3 mb-4">
           <div class="card text-center">
-            <img src="https://picsum.photos/150/150?random=4" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px;" alt="Artist">
+            <img src="https://picsum.photos/150/150?random=4" class="card-img-top rounded-circle mx-auto mt-3"
+              style="width: 150px; height: 150px;" alt="Artist">
             <div class="card-body">
               <h5 class="card-title">Emma Davis</h5>
               <p class="card-text">Pop Artist</p>
@@ -113,7 +158,8 @@
         </div>
         <div class="col-md-3 mb-4">
           <div class="card text-center">
-            <img src="https://picsum.photos/150/150?random=5" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px;" alt="Artist">
+            <img src="https://picsum.photos/150/150?random=5" class="card-img-top rounded-circle mx-auto mt-3"
+              style="width: 150px; height: 150px;" alt="Artist">
             <div class="card-body">
               <h5 class="card-title">The Resonants</h5>
               <p class="card-text">Rock Band</p>
@@ -123,7 +169,8 @@
         </div>
         <div class="col-md-3 mb-4">
           <div class="card text-center">
-            <img src="https://picsum.photos/150/150?random=6" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px;" alt="Artist">
+            <img src="https://picsum.photos/150/150?random=6" class="card-img-top rounded-circle mx-auto mt-3"
+              style="width: 150px; height: 150px;" alt="Artist">
             <div class="card-body">
               <h5 class="card-title">DJ Pulse</h5>
               <p class="card-text">Electronic</p>
@@ -133,7 +180,8 @@
         </div>
         <div class="col-md-3 mb-4">
           <div class="card text-center">
-            <img src="https://picsum.photos/150/150?random=7" class="card-img-top rounded-circle mx-auto mt-3" style="width: 150px; height: 150px;" alt="Artist">
+            <img src="https://picsum.photos/150/150?random=7" class="card-img-top rounded-circle mx-auto mt-3"
+              style="width: 150px; height: 150px;" alt="Artist">
             <div class="card-body">
               <h5 class="card-title">Melody Quinn</h5>
               <p class="card-text">R&B Singer</p>
@@ -298,8 +346,11 @@
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
           <h2 class="mb-4">About Music Discovery</h2>
-          <p class="lead">Music Discovery is a simple platform to help music lovers find new songs and artists. We believe that great music should be accessible to everyone.</p>
-          <p>Our team of music enthusiasts curates playlists across various genres to help you discover your next favorite song. Whether you're looking for workout motivation, study music, or just something new to listen to, we've got you covered.</p>
+          <p class="lead">Music Discovery is a simple platform to help music lovers find new songs and artists. We
+            believe that great music should be accessible to everyone.</p>
+          <p>Our team of music enthusiasts curates playlists across various genres to help you discover your next
+            favorite song. Whether you're looking for workout motivation, study music, or just something new to listen
+            to, we've got you covered.</p>
           <p class="mb-4">Have suggestions? We'd love to hear from you!</p>
           <a href="#" class="btn btn-primary">Contact Us</a>
         </div>
