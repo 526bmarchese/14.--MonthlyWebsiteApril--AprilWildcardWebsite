@@ -74,6 +74,40 @@
         </div>
     </section>
 
+    <!-- Interactive Image Gallery -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-4">Our Team</h2>
+                    <div class="image-gallery">
+                        <div class="current-image-container position-relative">
+                            <img id="current-gallery-image" src="https://picsum.photos/800/500?random=201" class="img-fluid rounded shadow" alt="Gallery Image">
+                            <div class="gallery-controls position-absolute w-100 d-flex justify-content-between" style="top: 50%; transform: translateY(-50%);">
+                                <button id="prev-image" class="btn btn-dark btn-sm opacity-75">&lt;</button>
+                                <button id="next-image" class="btn btn-dark btn-sm opacity-75">&gt;</button>
+                            </div>
+                        </div>
+                        <div class="image-thumbnails d-flex justify-content-center mt-3 gap-2">
+                            <img src="https://picsum.photos/100/60?random=201" class="thumbnail active" data-full="https://picsum.photos/800/500?random=201" alt="Thumbnail" style="width: 100px; cursor: pointer; opacity: 1;">
+                            <img src="https://picsum.photos/100/60?random=202" class="thumbnail" data-full="https://picsum.photos/800/500?random=202" alt="Thumbnail" style="width: 100px; cursor: pointer; opacity: 0.6;">
+                            <img src="https://picsum.photos/100/60?random=203" class="thumbnail" data-full="https://picsum.photos/800/500?random=203" alt="Thumbnail" style="width: 100px; cursor: pointer; opacity: 0.6;">
+                            <img src="https://picsum.photos/100/60?random=204" class="thumbnail" data-full="https://picsum.photos/800/500?random=204" alt="Thumbnail" style="width: 100px; cursor: pointer; opacity: 0.6;">
+                        </div>
+                        <p id="gallery-caption" class="text-center mt-3">Our music discovery team hosting a live event</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Switcher -->
+    <div class="position-fixed bottom-0 end-0 m-3">
+        <button id="theme-toggle" class="btn btn-dark rounded-circle p-3">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row justify-content-center">

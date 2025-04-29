@@ -1,5 +1,6 @@
 body {
 	font-family: Arial, sans-serif;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 .hero-section {
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -139,6 +140,94 @@ footer a:hover {
 	padding: 5px;
 	border-radius: 5px;
 }
+
+/* Interactive Gallery Styles */
+.image-gallery {
+	margin-bottom: 30px;
+}
+
+.current-image-container {
+	margin-bottom: 10px;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+#current-gallery-image {
+	transition: transform 0.4s ease;
+	width: 100%;
+}
+
+#current-gallery-image:hover {
+	transform: scale(1.02);
+}
+
+.gallery-controls button {
+	margin: 0 10px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.image-thumbnails {
+	overflow-x: auto;
+	white-space: nowrap;
+	padding: 5px 0;
+}
+
+.thumbnail {
+	transition: all 0.3s ease;
+	border-radius: 4px;
+	border: 2px solid transparent;
+}
+
+.thumbnail.active {
+	border-color: #1db954;
+}
+
+.thumbnail:hover {
+	opacity: 0.9 !important;
+	transform: translateY(-2px);
+}
+
+/* Dark Mode Styles */
+body.dark-theme {
+	background-color: #121212;
+	color: #e0e0e0;
+}
+
+.dark-theme .navbar {
+	background-color: #000 !important;
+}
+
+.dark-theme .text-muted {
+	color: #aaa !important;
+}
+
+#theme-toggle {
+	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+	transform: rotate(30deg);
+}
+
+/* Transition effects for theme switch */
+.card, .btn, section {
+	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 @media (max-width: 768px) {
 	.hero-section {
 		padding: 60px 0;

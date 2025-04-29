@@ -427,4 +427,146 @@ window.onload = function () {
 			recommendationResults.scrollIntoView({ behavior: 'smooth' });
 		});
 	}
+
+	// Interactive Image Gallery
+	var currentImage = document.getElementById("current-gallery-image");
+	var thumbnails = document.querySelectorAll(".thumbnail");
+	var prevButton = document.getElementById("prev-image");
+	var nextButton = document.getElementById("next-image");
+	var galleryCaption = document.getElementById("gallery-caption");
+	var currentImageIndex = 0;
+	
+	// Gallery captions for each image
+	var imageCaptions = [
+		"Our music discovery team hosting a live event",
+		"Recording session with indie artists at our studio",
+		"Annual music festival sponsored by Music Discovery",
+		"Team meeting discussing new playlist features"
+	];
+	
+	// Only set up gallery functionality if elements exist
+	if (thumbnails.length > 0 && currentImage) {
+		// Set up thumbnail click handlers
+		thumbnails.forEach(function(thumbnail, index) {
+			thumbnail.addEventListener("click", function() {
+				currentImage.src = this.getAttribute("data-full");
+				currentImageIndex = index;
+				updateGalleryState();
+			});
+		});
+		
+		// Next button handler
+		if (nextButton) {
+			nextButton.addEventListener("click", function() {
+				currentImageIndex = (currentImageIndex + 1) % thumbnails.length;
+				currentImage.src = thumbnails[currentImageIndex].getAttribute("data-full");
+				updateGalleryState();
+			});
+		}
+		
+		// Previous button handler
+		if (prevButton) {
+			prevButton.addEventListener("click", function() {
+				currentImageIndex = (currentImageIndex - 1 + thumbnails.length) % thumbnails.length;
+				currentImage.src = thumbnails[currentImageIndex].getAttribute("data-full");
+				updateGalleryState();
+			});
+		}
+		
+		// Update active thumbnail and caption
+		function updateGalleryState() {
+			thumbnails.forEach(function(thumb, idx) {
+				if (idx === currentImageIndex) {
+					thumb.classList.add("active");
+					thumb.style.opacity = "1";
+				} else {
+					thumb.classList.remove("active");
+					thumb.style.opacity = "0.6";
+				}
+			});
+			
+			if (galleryCaption) {
+				galleryCaption.textContent = imageCaptions[currentImageIndex];
+			}
+		}
+	}
+	
+	// Theme Switcher
+	var themeToggle = document.getElementById("theme-toggle");
+	var isDarkMode = false;
+	
+	if (themeToggle) {
+		// Check if user has a saved preference
+		if (localStorage.getItem("darkMode") === "true") {
+			enableDarkMode();
+		}
+		
+		themeToggle.addEventListener("click", function() {
+			if (isDarkMode) {
+				disableDarkMode();
+			} else {
+				enableDarkMode();
+			}
+		});
+	}
+	
+	function enableDarkMode() {
+		// Add dark theme to body
+		document.body.classList.add("dark-theme");
+		
+		// Update button icon
+		if (themeToggle) {
+			themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+			themeToggle.classList.remove("btn-dark");
+			themeToggle.classList.add("btn-light");
+		}
+		
+		// Save preference
+		localStorage.setItem("darkMode", "true");
+		isDarkMode = true;
+		
+		// Change section backgrounds
+		var lightSections = document.querySelectorAll(".bg-light");
+		lightSections.forEach(function(section) {
+			section.classList.remove("bg-light");
+			section.classList.add("bg-dark", "text-white");
+		});
+		
+		// Change card appearances
+		var cards = document.querySelectorAll(".card");
+		cards.forEach(function(card) {
+			card.classList.add("bg-dark", "text-white", "border-secondary");
+		});
+	}
+	
+	function disableDarkMode() {
+		// Remove dark theme from body
+		document.body.classList.remove("dark-theme");
+		
+		// Update button icon
+		if (themeToggle) {
+			themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+			themeToggle.classList.remove("btn-light");
+			themeToggle.classList.add("btn-dark");
+		}
+		
+		// Save preference
+		localStorage.setItem("darkMode", "false");
+		isDarkMode = false;
+		
+		// Restore section backgrounds
+		var darkSections = document.querySelectorAll(".bg-dark.text-white:not(nav):not(footer)");
+		darkSections.forEach(function(section) {
+			if (!section.classList.contains("navbar") && !section.classList.contains("footer")) {
+				section.classList.add("bg-light");
+				section.classList.remove("bg-dark", "text-white");
+			}
+		});
+		
+		// Restore card appearances
+		var cards = document.querySelectorAll(".card");
+		cards.forEach(function(card) {
+			card.classList.remove("bg-dark", "text-white", "border-secondary");
+		});
+	}
 };
