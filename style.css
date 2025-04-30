@@ -4,7 +4,7 @@ body {
 }
 .hero-section {
 	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-		url("https://picsum.photos/1920/1080?random=0");
+		url("https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80");
 	background-size: cover;
 	background-position: center;
 	padding: 80px 0;
@@ -73,42 +73,42 @@ footer a:hover {
 }
 
 .genre-card[data-genre="pop"] {
-	background-image: url('https://picsum.photos/300/150?random=101');
+	background-image: url('https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=150&q=80');
 	background-size: cover;
 }
 
 .genre-card[data-genre="rock"] {
-	background-image: url('https://picsum.photos/300/150?random=102');
+	background-image: url('https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=150&q=80');
 	background-size: cover;
 }
 
 .genre-card[data-genre="hip-hop"] {
-	background-image: url('https://picsum.photos/300/150?random=103');
+	background-image: url('https://images.unsplash.com/photo-1547355253-ff0740f6e8c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=150&q=80');
 	background-size: cover;
 }
 
 .genre-card[data-genre="electronic"] {
-	background-image: url('https://picsum.photos/300/150?random=104');
+	background-image: url('https://images.unsplash.com/photo-1571935441005-72a3497ae1fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=150&q=80');
 	background-size: cover;
 }
 
 .genre-card[data-genre="jazz"] {
-	background-image: url('https://picsum.photos/300/150?random=105');
+	background-image: url('https://images.unsplash.com/photo-1511192336575-5a79af67a629?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=150&q=80');
 	background-size: cover;
 }
 
 .genre-card[data-genre="classical"] {
-	background-image: url('https://picsum.photos/300/150?random=106');
+	background-image: url('https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=150&q=80');
 	background-size: cover;
 }
 
 .genre-card[data-genre="country"] {
-	background-image: url('https://picsum.photos/300/150?random=107');
+	background-image: url('https://images.unsplash.com/photo-1543862475-eb136770ae9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=150&q=80');
 	background-size: cover;
 }
 
 .genre-card[data-genre="rb"] {
-	background-image: url('https://picsum.photos/300/150?random=108');
+	background-image: url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=150&q=80');
 	background-size: cover;
 }
 
@@ -194,39 +194,6 @@ footer a:hover {
 	transform: translateY(-2px);
 }
 
-/* Dark Mode Styles */
-body.dark-theme {
-	background-color: #121212;
-	color: #e0e0e0;
-}
-
-.dark-theme .navbar {
-	background-color: #000 !important;
-}
-
-.dark-theme .text-muted {
-	color: #aaa !important;
-}
-
-#theme-toggle {
-	box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-	width: 50px;
-	height: 50px;
-	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: transform 0.3s ease;
-}
-
-#theme-toggle:hover {
-	transform: rotate(30deg);
-}
-
-/* Transition effects for theme switch */
-.card, .btn, section {
-	transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
 
 @media (max-width: 768px) {
 	.hero-section {
