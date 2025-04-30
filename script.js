@@ -1,4 +1,4 @@
-// Execute when page loads
+// Execute when page loads (Object)
 window.onload = function () {
 	setupNavigation();
 	setupButtons();
@@ -13,18 +13,20 @@ window.onload = function () {
 // Navigation functionality
 function setupNavigation() {
 	document.querySelectorAll("nav a").forEach(link => {
+		//OBJECT (Sathvik helped me )
 		link.onclick = function(e) {
 			if (this.getAttribute("href").includes(".html")) return true;
 			
 			e.preventDefault();
-			const targetSection = document.querySelector(this.getAttribute("href"));
+			const targetSection = document.querySelector(this.getAttribute("href")); //OBJECT (Sathvik helped me )
+
 			
 			if (targetSection) {
-				window.scrollTo({
+				window.scrollTo({ //OBJECT (Sathvik helped me )
 					top: targetSection.offsetTop - 70,
 					behavior: "smooth"
 				});
-				
+				//OBJECT (Sathvik helped me )
 				document.querySelector("nav .active")?.classList.remove("active");
 				this.classList.add("active");
 			}
@@ -35,7 +37,7 @@ function setupNavigation() {
 // Button click handlers
 function setupButtons() {
 	// Listen buttons
-	document.querySelectorAll(".btn-primary").forEach(btn => {
+	document.querySelectorAll(".btn-primary").forEach(btn => { //OBJECT (Sathvik helped me )
 		btn.onclick = function(e) {
 			if (this.closest("#recommendation-form") || 
 				this.closest("#recommendations-container") || 
@@ -48,7 +50,7 @@ function setupButtons() {
 	});
 	
 	// Profile buttons
-	document.querySelectorAll(".btn-outline-primary").forEach(btn => {
+	document.querySelectorAll(".btn-outline-primary").forEach(btn => { //OBJECT (Sathvik helped me )
 		btn.onclick = function(e) {
 			e.preventDefault();
 			const artist = this.parentNode.querySelector(".card-title")?.textContent;
@@ -59,6 +61,7 @@ function setupButtons() {
 
 // Newsletter subscription
 function setupNewsletter() {
+	//OBJECT (Sathvik helped me )
 	const subscribeBtn = document.getElementById("subscribe-btn");
 	const emailInput = document.getElementById("newsletter-email");
 	const messageDiv = document.getElementById("subscription-message");
@@ -84,7 +87,7 @@ function setupNewsletter() {
 
 // Footer year update
 function setupFooterYear() {
-	const footerYear = document.querySelector("footer .small");
+	const footerYear = document.querySelector("footer .small"); //OBJECT (Sathvik helped me )
 	if (footerYear) {
 		footerYear.innerHTML = "© " + new Date().getFullYear() + " Music Discovery. All rights reserved.";
 	}
@@ -92,14 +95,14 @@ function setupFooterYear() {
 
 // Music search functionality
 function setupMusicSearch() {
-	const searchBtn = document.getElementById("search-btn");
+	const searchBtn = document.getElementById("search-btn"); //OBJECT (Sathvik helped me )
 	const searchInput = document.getElementById("music-search");
 	const searchResults = document.getElementById("search-results");
 	const resultsContainer = document.getElementById("results-container");
 	
 	if (!searchBtn || !searchInput) return;
 	
-	// Sample music data
+	// Sample music data OBJECTS (Sathvik helped me )
 	const musicData = [
 		{
 			title: "greedy",
@@ -134,7 +137,7 @@ function setupMusicSearch() {
 			alert("Please enter a search term");
 			return;
 		}
-		
+		//OBJECT (Sathvik helped me )
 		const results = musicData.filter(item => 
 			item.title.toLowerCase().includes(query) || 
 			item.artist.toLowerCase().includes(query) || 
@@ -150,7 +153,7 @@ function setupMusicSearch() {
 		}
 		
 		results.forEach(item => {
-			const resultCard = document.createElement("div");
+			const resultCard = document.createElement("div"); //OBJECT (Sathvik helped me )
 			resultCard.className = "col-md-6 col-lg-4 mb-4";
 			resultCard.innerHTML = `
 				<div class="card">
@@ -176,12 +179,13 @@ function setupMusicSearch() {
 	
 	searchBtn.onclick = performSearch;
 	searchInput.addEventListener("keyup", e => {
-		if (e.key === "Enter") performSearch();
+		if (e.key === "Enter") performSearch(); //OBJECT (Sathvik helped me )
 	});
 }
 
 // Genre card functionality
 function setupGenreCards() {
+	//OBJECT (Sathvik helped me )
 	document.querySelectorAll(".genre-card").forEach(card => {
 		card.onclick = function() {
 			const genreName = this.querySelector("h3").textContent;
@@ -195,10 +199,10 @@ function setupGenreCards() {
 
 // Music recommendation system
 function setupRecommendations() {
-	const form = document.getElementById("recommendation-form");
+	const form = document.getElementById("recommendation-form"); //OBJECT (Sathvik helped me )
 	if (!form) return;
 	
-	// Recommendations data 
+	// Recommendations data OBJECTS (Sathvik helped me )
 	const recommendationsData = {
 		pop: {
 			happy: [{ title: "Dance Pop Hits", artist: "Various Artists", description: "Upbeat dance tracks to lift your mood" }],
@@ -234,6 +238,7 @@ function setupRecommendations() {
 		}
 	};
 	
+	//OBJECT (Sathvik helped me )
 	form.addEventListener("submit", function(e) {
 		e.preventDefault();
 		
@@ -252,7 +257,7 @@ function setupRecommendations() {
 		results.style.display = "block";
 		container.innerHTML = "";
 		
-		const recommendations = recommendationsData[genre][mood];
+		const recommendations = recommendationsData[genre][mood]; //OBJECT (Sathvik helped me )
 		
 		if (recommendations?.length) {
 			recommendations.forEach(item => {
@@ -305,7 +310,7 @@ function setupRecommendations() {
 
 // Image gallery functionality
 function setupGallery() {
-	const currentImage = document.getElementById("current-gallery-image");
+	const currentImage = document.getElementById("current-gallery-image"); //OBJECT (Sathvik helped me )
 	const thumbnails = document.querySelectorAll(".thumbnail");
 	const prevButton = document.getElementById("prev-image");
 	const nextButton = document.getElementById("next-image");
@@ -314,6 +319,8 @@ function setupGallery() {
 	if (!thumbnails.length || !currentImage) return;
 	
 	let currentImageIndex = 0;
+
+	//OBJECT (Sathvik helped me )
 	const captions = [
 		"Our music discovery team hosting a live event",
 		"Recording session with indie artists at our studio",
